@@ -14,15 +14,15 @@ process DEVIDER {
 
     output:
     tuple val(meta),    path("snp_haplotypes.fasta"),              emit: snp_haplotypes
-    tuple val(meta),    path( "majority_vote_haplotypes.fasta"),   emit: majority_vote_haplotypes
-    tuple val(meta),    path( "ids.txt"),                          emit: ids
-    tuple val(meta),    path( "hap_info.txt"),                     emit: hap_info
-    tuple val(meta),    path( "*.bam"),                            emit: bam
-    tuple val(meta),    path( "*.bai"),                            emit: bai
-    tuple val(meta),    path( "*.vcf.gz"),                         emit: vcf
-    tuple val(meta),    path( "*.vcf.gz.tbi"),                     emit: tbi
-    tuple val(meta),    path( "*.tagged.bam"),                     emit: tagged_bam, optional: true
-    tuple val(meta),    path( "*.tagged.bai"),                     emit: tagged_bai, optional: true
+    tuple val(meta),    path("majority_vote_haplotypes.fasta"),    emit: majority_vote_haplotypes
+    tuple val(meta),    path("ids.txt"),                           emit: ids
+    tuple val(meta),    path("hap_info.txt"),                      emit: hap_info
+    tuple val(meta),    path("*.bam"),                             emit: bam
+    tuple val(meta),    path("*.bai"),                             emit: bai
+    tuple val(meta),    path("*.vcf.gz"),                          emit: vcf
+    tuple val(meta),    path("*.vcf.gz.tbi"),                      emit: tbi
+    tuple val(meta),    path("*.tagged.bam"),                      emit: tagged_bam, optional: true
+    tuple val(meta),    path("*.tagged.bai"),                      emit: tagged_bai, optional: true
     path "versions.yml",                                           emit: versions
 
     when:
